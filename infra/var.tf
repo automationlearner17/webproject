@@ -1,44 +1,46 @@
-variable REGION {
+variable "REGION" {
 
- default = "us-east-1"
-
-}
-
-variable AMI {
-
- type = map
- default {
-
-  us-east-1 = "ami-061dbd1209944525c" 
- 
-
- } 
+  default = "us-east-1"
 
 }
 
-variable INS_TYPE {
+variable "AMI" {
 
- JENKINS = "t2.micro"
- SONAR = "t2.medium"
- KOPS = "t2.micro"
- ANSIBLE = "t2.micro"
- DOCKER = "t2.micro"
+  type = map(any)
+  default = {
 
+    us-east-1 = "ami-061dbd1209944525c"
+
+
+  }
 
 }
 
-variable KEYS {
+variable "INS_TYPE" {
+
+  type = map(any)
+  default = {
+    JENKINS = "t2.micro"
+    SONAR   = "t2.medium"
+    KOPS    = "t2.micro"
+    ANSIBLE = "t2.micro"
+    DOCKER  = "t2.micro"
+  }
+
+}
+
+variable "KEYS" {
 
 
- type = map
- default {
- 
- JENKINS = "jenkins-key"
- SONAR = "sonar-key"
- KOPS = "kops-key"
- ANSIBLE = "ansible-key"
- DOCKER = "docker-key"
+  type = map(any)
+  default = {
 
- }
+    JENKINS = "jenkins-key.pub"
+    SONAR   = "sonar-key.pub"
+    KOPS    = "kops-key.pub"
+    ANSIBLE = "ansible-key.pub"
+    DOCKER  = "docker-key.pub"
+
+  }
 
 }

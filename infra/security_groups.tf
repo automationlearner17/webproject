@@ -3,11 +3,11 @@ resource "aws_security_group" "jenkins-SG" {
   description = "Allow TLS inbound traffic"
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 8080
-    to_port          = 8080
-    protocol         = "tcp"
-    cidr_blocks      = ["103.167.194.102/32"]
+    description = "TLS from VPC"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["103.133.121.186/32"]
   }
 
   egress {
@@ -29,11 +29,11 @@ resource "aws_security_group" "sonar-SG" {
   description = "Allow TLS inbound traffic"
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 80
-    to_port          = 80
-    protocol         = "tcp"
-    cidr_blocks      = ["103.167.194.102/32"]
+    description = "TLS from VPC"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["103.133.121.186/32"]
   }
 
   egress {
@@ -56,11 +56,11 @@ resource "aws_security_group" "Kops-SG" {
   description = "Allow TLS inbound traffic"
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = ["103.167.194.102/32"]
+    description = "TLS from VPC"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["103.133.121.186/32"]
   }
 
   egress {
@@ -82,11 +82,11 @@ resource "aws_security_group" "ansible-SG" {
   description = "Allow TLS inbound traffic"
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = ["103.167.194.102/32"]
+    description = "TLS from VPC"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["103.133.121.186/32"]
   }
 
   egress {
@@ -109,11 +109,11 @@ resource "aws_security_group" "docker-SG" {
   description = "Allow TLS inbound traffic"
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = ["103.167.194.102/32"]
+    description = "TLS from VPC"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["103.133.121.186/32"]
   }
 
   egress {
